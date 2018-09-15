@@ -22,12 +22,14 @@ function multiplica(i, j) {
     var salida = j * i;
     return salida;
 }
-function crear(j){
-    for (a=0;a<j;a++){
-        persona.edad= persona.edad+1;
+
+function crear(j) {
+    for (a = 0; a < j; a++) {
+        persona.edad = persona.edad + 1;
         console.log(persona.edad);
     }
 }
+
 function matematica(i, j) {
     var sumana = suman(i);
     var multi = multiplica(i, j);
