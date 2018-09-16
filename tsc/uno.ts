@@ -6,4 +6,12 @@ const EDAD =15;
 let texto:string=`hola ${mensaje}
 edad ${EDAD}`;
 console.log(texto);
-
+function saludar(nombre?:string){
+    if (nombre){
+        console.log(`hola ${nombre} 
+¿como estas?`);
+    }
+}
+saludar("josè");
+let comer = (vo:string) =>(EDAD);
+comer();
