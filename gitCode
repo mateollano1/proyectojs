@@ -1,0 +1,15 @@
+Comandos utilizados en git
+
+git init //Crea un repositorio local, crea un .git invisible
+git status // Muestra los cambios realizados a partir de la última versión
+git add  // Agrega los cambios al repositorio, se usa (*) para indicar todos los archivos
+git commit -m // crea un commit o un histórico, se pone un mensaje de que se ha hecho
+//a través de los commits se puede viajar, yendo a commits anteriores
+git remote add origin (ruta) // crea una conexión remota al repositorio ubicado en la nube, solo se hace la primera vez que se crea el repositorio
+git push origin master // Carga el repositorio local en la nube, pone la última version como cabeza
+git clone (ruta) // Descarga el repositorio de la nube
+git log // Da acceso a todos los commits de un repositorio
+git log --oneline //Muestra los commits en una linea cada uno
+git log -n // n = número de commits que se desean visualizar
+git log --all --grep "..." // Busca commits que contengan la palabra ingresada
+git show (id del commit) // Muestra el commit en la terminal
