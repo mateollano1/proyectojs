@@ -30,5 +30,30 @@ var jugador2 = {
     posicion: "Defensa"
 };
 //let {nombre,apellido,posicion}=jugador;
-var nombre = jugador2.nombre, apellido = jugador2.apellido, posicion = jugador2.posicion;
-console.log("El jugador " + nombre + " de apellido " + apellido + "\njuega en la posici\u00F2n de " + posicion);
+//let {nombre,apellido,posicion}=jugador2;
+//console.log(`El jugador ${nombre} de apellido ${apellido}
+//juega en la posiciòn de ${posicion}`);  
+//----- Promesas -----
+var prom1 = new Promise(function (resolve, reject) {
+    console.log("promesa");
+    reject();
+});
+prom1.then(function () { console.log("Termina bien"); }, function () { console.log("Termina mal"); });
+function correr(personaje) {
+    console.log("el xmen " + personaje.nombre + " est\u00E0 corriendo");
+}
+var creator = {
+    nombre: "mateo",
+    edad: 45,
+    real: "hola"
+};
+correr(creator);
+// ---- clases y constructores ----
+var MyFlaseO = /** @class */ (function () {
+    function MyFlaseO(nombre, equipo, edad) {
+        this.nombre = nombre;
+        this.equipo = equipo;
+        this.edad = edad;
+    }
+    return MyFlaseO;
+}());
