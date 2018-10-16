@@ -1,0 +1,10 @@
+<div class="card-columns">
+    <div class="card" *ngFor="let nuevo of nuevos">
+      <img class="card-img-top" src="{{nuevo.images[0].url}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{nuevo.name}}</h5>
+        <a  class="badge badge-dark" *ngFor="let artist of nuevo.artists">{{artist.name}}</a>
+        <p class="card-text"></p>
+      </div>
+    </div>
+<div>
