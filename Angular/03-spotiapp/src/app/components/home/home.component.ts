@@ -7,14 +7,16 @@ import { SpotifyService } from '../../services/spotify.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  nuevos: any [] = [];
-  constructor(private spoti: SpotifyService) { 
-    this.spoti.getReleases().subscribe((rel:any)=>{this.nuevos=rel.albums.items;
-      console.log(this.nuevos);});
+  nuevos: any[] = [];
+  constructor(private spoti: SpotifyService) {
+    this.spoti.getReleases().subscribe((rel: any) => {
+    this.nuevos = rel;
+      console.log(this.nuevos);
+    });
   }
 
   ngOnInit() {
-    
+
   }
 
 }
