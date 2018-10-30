@@ -1,13 +1,5 @@
-<div class="card-columns">
-    <div class="card" *ngFor="let nuevo of nuevos">
-        <img class="card-img-top" src="{{nuevo.images[0].url}}" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{nuevo.name}}</h5>
-            <p class="card-text">Lanzamiento: {{nuevo.release_date | date: 'M/d/yy' }}</p>
-            <a class="badge badge-dark" *ngFor="let artist of nuevo.artists">{{artist.name}}</a>
+<div *ngIf="loading">
+    <app-loading></app-loading>
+</div>
 
-
-        </div>
-    </div>
-    <div>
-        <div>
+<app-tarjets [items]="nuevos" ></app-tarjets>

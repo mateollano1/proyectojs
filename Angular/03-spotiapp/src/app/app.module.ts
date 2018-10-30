@@ -10,6 +10,10 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { routes } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetsComponent } from './components/shared/tarjets/tarjets.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { ArtistaBuscadoComponent } from './components/shared/artista-buscado/artista-buscado.component';
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import { HttpClientModule } from '@angular/common/http';
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    PaisesComponent
+    PaisesComponent,
+    NoimagePipe,
+    TarjetsComponent,
+    LoadingComponent,
+    ArtistaBuscadoComponent
   ],
   imports: [
     BrowserModule,

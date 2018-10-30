@@ -20,21 +20,40 @@ export class SpotifyService {
     // this.http.post('https://accounts.spotify.com/api/token', {headers}).subscribe((par: any) => this.key = par);
     // console.log(this.key);
    }
-   ruta = 'BQAFhZuC4s7fWf0PY-_iPSNOD0r75n7Fz1yrPrgwcAO1x3fKuTzVAV7rSiw1amCZCi2vabPuUO2DNOzOw-o';
-  getReleases() {
+   getquery(query: string){
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.ruta}`
     });
-    return this.http.get('https://api.spotify.com/v1/browse/new-releases?country=CO', { headers }).pipe( map((data: any) => {
+    let url = `https://api.spotify.com/v1/${query}`;
+    console.log(url);
+    return this.http.get(url, { headers });
+   }
+   ruta = 'BQBUSBMgtUaXNsIMVKMI3tReqlpt-AOXpUFutYK_wUzIB-lxmPz8qXxAR3eV9GllGJ-VeAA4E0KdccrM3sQ';
+  getReleases() {
+    // const headers = new HttpHeaders({
+    //   'Authorization': `Bearer ${this.ruta}`
+    // });
+    // return this.http.get(`https://api.spotify.com/v1/browse/new-releases?`, { headers })
+    return this.getquery("browse/new-releases?").pipe( map((data: any) => {
       return data.albums.items;
     }));
   }
   getArtista (termino: string) {
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.ruta}`
-    });
-    return this.http.get(`https://api.spotify.com/v1/search?q=${termino}&type=artist&limit=15`, { headers }).pipe( map( (data: any) => {
+   
+    return this.getquery(`search?q=${termino}&type=artist&limit=15`).pipe( map( (data: any) => {
       return data.artists.items; }));
+  }
+  getReleasesPais(pais: string){
+     
+    return this.getquery(`browse/new-releases?country=${pais}`).pipe( map((data: any) => {
+      return data.albums.items;
+    }));
+  }
+  getInfoArtist(id: string){
+    return this.getquery(`artists/${id}`).pipe( map((data: any) => {
+      // console.log(data);
+      return data;
+    }));;
   }
 }
 
