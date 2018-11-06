@@ -19,7 +19,8 @@ peliculas: any [] = [];
   buscar(palabra: string) {
     console.log(palabra);
     this.movie.getPeliculas(palabra).subscribe((movies: any) => { console.log(movies);
-    this.peliculas = movies; });
+    this.peliculas = movies.Search;
+    console.log(this.peliculas); });
   }
 
 }
