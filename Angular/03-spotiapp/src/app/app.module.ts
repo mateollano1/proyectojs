@@ -14,6 +14,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetsComponent } from './components/shared/tarjets/tarjets.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { ArtistaBuscadoComponent } from './components/shared/artista-buscado/artista-buscado.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ArtistaBuscadoComponent } from './components/shared/artista-buscado/art
     NoimagePipe,
     TarjetsComponent,
     LoadingComponent,
-    ArtistaBuscadoComponent
+    ArtistaBuscadoComponent,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ArtistaBuscadoComponent implements OnInit {
 @Input() items: any [] = [];
 total: string;
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit() {
