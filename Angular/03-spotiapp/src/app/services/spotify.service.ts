@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 export class SpotifyService {
   releases: any[] = [];
   key: any [] = [];
-  ruta = 'BQDip84all14xx7Qdo1UcNZeQfeZUgKaCb6_Ab8CuSvEBRpMB6hLygKJJIunXs5J_O_UT_ktXA7j8d16VcQ';
+  ruta = 'BQA6BKerRv27JxqAk28TdZ86JXBlCTFCEPfztSLDxEOKL2U9rcEa5gbheAGaaWUmujsiQMw3E6pruMcBdLw';
   constructor(private http: HttpClient) {
     // const headers = new HttpHeaders({
     //   'Content-Type': 'application/x-www-form-urlencoded'

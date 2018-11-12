@@ -10,4 +10,7 @@ export class MovieService {
   getPeliculas(nombre: string) {
     return this.http.get(`http://www.omdbapi.com/?s=${nombre}&page=1&apikey=f5cb6848`);
   }
+  getPeliculaInfo(nombre: string) {
+    return this.http.get(`http://www.omdbapi.com/?i=${nombre}&page=1&apikey=f5cb6848`);
+  }
 }
