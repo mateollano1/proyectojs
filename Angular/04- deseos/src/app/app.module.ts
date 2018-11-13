@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PendientesComponent } from '../pages/pendientes/pendientes';
 import { TerminadosPage } from '../pages/terminados/terminadosPage';
 import { DeseosProvider } from '../providers/deseos/deseos';
+import { AgregadosComponent } from '../pages/agregados/agregados';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DeseosProvider } from '../providers/deseos/deseos';
     HomePage,
     TabsPage,
     PendientesComponent,
-    TerminadosPage
+    TerminadosPage,
+    AgregadosComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { DeseosProvider } from '../providers/deseos/deseos';
     HomePage,
     TabsPage,
     PendientesComponent,
-    TerminadosPage
+    TerminadosPage,
+    AgregadosComponent
   ],
   providers: [
     StatusBar,
