@@ -6,12 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'miscelaneos';
-  tamano = 80;
-  mas() {
-    this.tamano = this.tamano + 5;
-  }
-  menos() {
-    this.tamano = this.tamano - 5;
-  }
+  title = 'heroesApp';
 }
