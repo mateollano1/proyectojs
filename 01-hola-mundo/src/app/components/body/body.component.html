@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col">
+        <h1>*NGIF</h1>
+        <div *ngIf="bandera" class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+                <h6 class="card-title">{{presenta.mensaje}}</h6>
+                <p class="card-text">{{presenta.autor}}</p>
+            </div>
+        </div>
+        <button (click)="mostrar()" class="btn btn-outline-danger">Mostrar/Ocultar</button>
+    </div>
+    <div class="col">
+        <h1>*NGFOR</h1>
+        <ul class="list-group" style="max-width: 50%">
+            <li *ngFor="let ideas of idea; let i = index" class="list-group-item ">{{i +1}}- {{ideas}}</li>
+        </ul>
+    </div>
+</div>

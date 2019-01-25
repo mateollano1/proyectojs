@@ -1,0 +1,14 @@
+.previous {
+    background-color: #4CAF50;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.checked {
+    color: orange;
+}

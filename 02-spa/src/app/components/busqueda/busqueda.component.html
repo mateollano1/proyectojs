@@ -1,0 +1,35 @@
+<div *ngIf="hero.length==0" class="alert alert-info animated fadeIn">
+    <a href="#" class="alert-link center-block">{{palabra}} no se encuentra, por favor inténtalo de nuevo.</a>
+
+</div>
+<div class="card-columns animated fadeIn">
+    <!-- <div class="">
+      <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="assets/img/aquaman.png" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-block">Ver más ...</a>
+          </div>
+      </div>
+
+  </div> -->
+
+
+
+
+    <div *ngFor="let nomb of hero; let i = index">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{nomb.img}}" alt="{{nomb.nombre}}">
+            <div class="card-body">
+                <h5 class="card-title">{{nomb.nombre }}</h5>
+                <p class="card-text">{{nomb.bio}}</p>
+                <p class="card-text"><small class="text-muted">{{nomb.aparicion}}</small></p>
+                <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">ver màs ...</button>
+                <!-- <a href="#" [routerLink]="['/heroe',i]" class="btn btn-primary btn-block">Ver más ...</a> -->
+            </div>
+        </div>
+
+    </div>
+
+</div>

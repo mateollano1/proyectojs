@@ -1,0 +1,30 @@
+<app-loading *ngIf="!load"></app-loading>
+<div *ngIf="load" class="row ">
+    <div class="col">
+        <app-artista-buscado [items]="info"></app-artista-buscado>
+    </div>
+
+    <div *ngIf="load2" class="col-md-8">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Album</th>
+                    <th>Canción</th>
+                    <th>Audio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let exit of exitos">
+                    <th> <img src="{{exit.album.images[2].url}}" class="img-thumb"> </th>
+                    <th>{{exit.album.album_type}}</th>
+                    <th>{{exit.name}}</th>
+                    <!-- <th><audio src="{{exit.preview_url}}" controls></audio></th> -->
+                    <th><iframe [src]="exit.id | domseguro: 'https://open.spotify.com/embed/track/'" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"> </iframe> </th>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

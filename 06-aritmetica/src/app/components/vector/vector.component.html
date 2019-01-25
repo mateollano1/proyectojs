@@ -1,0 +1,11 @@
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+        <input type="text" style="width:80px;height:80px" class="form-control" placeholder="Res A" aria-label="Username" maxlength="2" aria-describedby="basic-addon1" #a>
+        <button (click)="cambiar()" type="button" class="btn btn-default">{{oper}}</button>
+        <input type="text" style="width:80px;height:80px" class="form-control" placeholder="Res B" aria-label="Username" maxlength="2" aria-describedby="basic-addon1" #b>
+        <button (click)="cambiar2()" type="button" class="btn btn-default">{{oper2}}</button>
+        <input type="text" style="width:80px;height:80px" class="form-control" placeholder="Res C" aria-label="Username" maxlength="2" aria-describedby="basic-addon1" #c>
+        <button type="button" class="btn btn-info">=</button>
+        <input (keyup)="listar(d.value)" type="text" style="width:80px;height:80px" class="form-control" placeholder="Res A" aria-label="Username" maxlength="2" aria-describedby="basic-addon1" #d>
+    </div>
+</div>
